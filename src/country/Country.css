@@ -1,0 +1,31 @@
+.mainComp{
+    width: max-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: -4px -5px 20px -5px #242424;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    margin: 30px 0;
+    height: 400px;
+}
+
+.mainComp:hover{
+    transform: scale(1.05);
+}
+.mainComp img{
+    width: 300px;
+    height: 180px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+h2, p{
+    padding: 0 30px;
+    margin: 0;
+}
+ h2{
+    font-weight: bold;
+    padding-top: 20px;
+
+}
