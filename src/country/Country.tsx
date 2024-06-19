@@ -1,9 +1,10 @@
-import  { FC } from 'react';
-import './Country.css'
+import { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Country.css';
 
 interface IProps {
   flags: {
-    [key: string]: string; 
+    [key: string]: string;
   };
   name: string;
   population: number;
@@ -12,9 +13,14 @@ interface IProps {
 }
 
 const Country: FC<IProps> = ({ flags, name, population, region, capital }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/country/${name}`);
+  };
 
   return (
-    <div className='mainComp'>
+    <div className='mainComp' onClick={handleClick}>
       <img src={flags.png} alt={name} />
       <h2>{name}</h2>
       <b><p>Population: {population}</p></b>

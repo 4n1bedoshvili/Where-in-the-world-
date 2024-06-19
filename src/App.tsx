@@ -7,7 +7,8 @@ import Search from './search/Search';
 import Filter from './filter/Filter';
 interface ICountry {
   flags: {
-    [key: string]: string; 
+    png: string; 
+    svg:string;
   };
     name: {
     common: string;
